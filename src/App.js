@@ -4,12 +4,10 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [weatherData, setWeatherData] = useState({});
-  const base_url = "http://api.weatherapi.com/v1";
-
 
   useEffect(() =>{
     const fetchWeatherData = async () => {
-      const res = await fetch(`${base_url}/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=Jaipur&days=7&aqi=no&alerts=no`);
+      const res = await fetch(`${process.env.REACT_APP_WEATHER_BASE_URL}/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=Jaipur&days=7&aqi=no&alerts=no`);
       const data = await res.json();
       setWeatherData(data);
     };
