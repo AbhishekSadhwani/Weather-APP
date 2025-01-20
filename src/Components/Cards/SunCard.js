@@ -1,7 +1,8 @@
 import { Sunrise, Sunset } from 'lucide-react'
 import React from 'react'
 
-export const SunCard = () => {
+export const SunCard = ({weatherdata}) => {
+    const sunCardData = weatherdata.forecast.forecastday[0].astro;
 
     return (
         <div className='bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl shadow-lg p-6 hover:bg-white/30 transition-all'>
@@ -12,7 +13,7 @@ export const SunCard = () => {
                 <Sunrise className="w-8 h-8 text-yellow-300 mr-3" />
                 <div>
                     <div className="text-white/60 text-sm">Sunrise</div>
-                    <div className="text-white font-bold text-lg">06:24 AM</div>
+                    <div className="text-white font-bold text-lg">{sunCardData.sunrise}</div>
                 </div>
                 </div>
             </div>
@@ -21,7 +22,7 @@ export const SunCard = () => {
                 <Sunset className="w-8 h-8 text-orange-400 mr-3" />
                 <div>
                     <div className="text-white/60 text-sm">Sunset</div>
-                    <div className="text-white font-bold text-lg">07:38 PM</div>
+                    <div className="text-white font-bold text-lg">{sunCardData.sunset}</div>
                 </div>
                 </div>
             </div>
