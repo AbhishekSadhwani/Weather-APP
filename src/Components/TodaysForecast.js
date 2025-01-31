@@ -1,7 +1,6 @@
 import { Clock, Droplets, MapPin, Sun, ThermometerSun, Wind } from 'lucide-react'
 import {WeatherDetailCard} from './Cards';
 import { weatherBackgrounds } from '../constants/weatherConditions';
-import { useState } from 'react';
 
 
 export const TodaysForecast = ({weatherdata, theme}) => {

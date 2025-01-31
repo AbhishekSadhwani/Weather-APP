@@ -1,4 +1,4 @@
-import { Sunrise, Sunset, Thermometer } from 'lucide-react'
+import { Sunrise, Sunset} from 'lucide-react'
 import React from 'react'
 
 export const SunCard = ({weatherdata,theme}) => {
