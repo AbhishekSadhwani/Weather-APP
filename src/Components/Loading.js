@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Loading = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 p-4 md:p-8">
+    <div className="min-h-screen p-4 md:p-8">
       <div className="max-w-5xl mx-auto space-y-8">
         {/* Search Bar Skeleton */}
         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-3 flex items-center shadow-lg border border-white/20">
